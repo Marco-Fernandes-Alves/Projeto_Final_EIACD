@@ -8,7 +8,7 @@ output_file = "dados_integrados.csv"
 def process_data():
     pacientes = pd.read_csv(os.path.join(base_path, "patients.csv"))
     dietas = pd.read_csv(os.path.join(base_path, "diets.csv"))
-    nutricionistas = pd.read_csv(os.path.join(base_path, "nutricionists.csv"))
+    nutricionistas = pd.read_csv(os.path.join(base_path, "nutritionists.csv"))
     resultados = pd.read_csv(os.path.join(base_path, "outcomes.csv"))
 
     df = resultados.merge(pacientes, on="patient_id", how="left")
